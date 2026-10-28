@@ -1,0 +1,30 @@
+Testing Notes - Internship Application Dashboard
+
+How I tested: I opened index.html, pressed F12, turned on the device toolbar (Ctrl+Shift+M) and changed the width.
+
+Mobile (375px)
+Expected: one column, the application cards are stacked (icon, text, button), the table scrolls sideways inside its box, the page itself does not scroll sideways.
+What I saw:
+
+Tablet (768px)
+Expected: still one column, but the application cards become one row (icon, text, button) because their panel is wide enough (container query).
+What I saw:
+
+Desktop (1280px)
+Expected: main column plus the steps sidebar, which stays in view while scrolling (sticky). The guidelines text is in two columns.
+What I saw:
+
+Themes
+- Dark theme switch in the header: the colours change (variables).
+- Browser DevTools > Rendering > "Emulate prefers-color-scheme: dark": the page starts dark.
+What I saw:
+
+Reduced motion
+- DevTools > Rendering > "Emulate prefers-reduced-motion: reduce".
+Expected: the green status dot stops pulsing, the progress bar shows at once without growing, hover lifts and scales stop.
+What I saw:
+
+Other checks
+- Press Tab: every link, button and field shows a yellow outline.
+- Alerts link in the header shows a red badge with 3 (generated content).
+- Leave Full name empty and click Submit: the label turns red and the browser shows a message.

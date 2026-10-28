@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Application Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">Bloomrix Dashboard</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="#overview" aria-current="page">Overview</a>
+        <a href="#applications">Applications</a>
+        <a href="#steps">Steps</a>
+        <a href="#apply">Apply</a>
+        <a href="#guidelines">Guidelines</a>
+        <a href="#applications" data-count="3">Alerts</a>
+      </nav>
+      <label class="switch">
+        <input class="sr-only" type="checkbox" id="theme-toggle">
+        <span class="track" aria-hidden="true"></span>
+        <span>Dark theme</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="page" id="top">
+
+    <section class="hero" id="overview">
+      <img class="avatar" src="profile-photo.jpg" alt="Muhammad Usman" width="96" height="96">
+      <div>
+        <h1>Welcome back, Muhammad</h1>
+        <p>Your internship applications at a glance.</p>
+        <p class="status"><span class="status-dot"></span>Status: interview stage</p>
+        <div class="progress" role="progressbar" aria-label="Application progress"
+             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+          <span class="progress-label">60% complete</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="dashboard">
+      <div class="dashboard-main">
+
+        <section class="stats" aria-label="Summary">
+          <div class="stat-wrap"><article class="stat"><p class="stat-value">12</p><p>Applications sent</p></article></div>
+          <div class="stat-wrap"><article class="stat"><p class="stat-value">3</p><p>Interviews</p></article></div>
+          <div class="stat-wrap"><article class="stat"><p class="stat-value">1</p><p>Offers</p></article></div>
+          <div class="stat-wrap"><article class="stat"><p class="stat-value">18</p><p>Days left</p></article></div>
+        </section>
+
+        <section class="panel" id="applications">
+          <h2>Applications</h2>
+
+          <article class="app-card">
+            <span class="app-icon" aria-hidden="true">B</span>
+            <div>
+              <h3>Interview scheduled</h3>
+              <p>Bloomrix, Web Development Intern. Friday 13 November, 10:00.</p>
+            </div>
+            <a class="btn" href="#apply">Details</a>
+          </article>
+
+          <article class="app-card">
+            <span class="app-icon" aria-hidden="true">N</span>
+            <div>
+              <h3>Document needed</h3>
+              <p>Northwind Labs asked for an updated resume.</p>
+            </div>
+            <a class="btn" href="#apply">Upload</a>
+          </article>
+
+          <article class="app-card">
+            <span class="app-icon" aria-hidden="true">P</span>
+            <div>
+              <h3>Offer received</h3>
+              <p>Pakistan Meteorological Department, AI/ML Intern.</p>
+            </div>
+            <a class="btn" href="#apply">Review</a>
+          </article>
+
+          <div class="table-wrap">
+            <table>
+              <caption>All applications</caption>
+              <thead>
+                <tr><th scope="col">Company</th><th scope="col">Role</th><th scope="col">Applied</th><th scope="col">Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Bloomrix</td><td>Web Development Intern</td><td>12 Oct 2026</td><td><span class="badge" data-status="interview">Interview</span></td></tr>
+                <tr><td>Northwind Labs</td><td>Software Engineer Intern</td><td>5 Oct 2026</td><td><span class="badge" data-status="pending">Pending</span></td></tr>
+                <tr><td>Pakistan Meteorological Dept.</td><td>AI/ML Intern</td><td>20 Sep 2026</td><td><span class="badge" data-status="offer">Offer</span></td></tr>
+                <tr><td>Example Studio</td><td>Social Media Intern</td><td>1 Sep 2026</td><td><span class="badge" data-status="closed">Closed</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel" id="apply">
+          <h2>New application</h2>
+          <form action="/submit-application" method="post">
+            <div class="field">
+              <label for="fullname">Full name</label>
+              <input type="text" id="fullname" name="fullname" minlength="3" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="program">Program</label>
+              <select id="program" name="program" required>
+                <option value="">Choose a program</option>
+                <option value="web">Web Development Intern</option>
+                <option value="software">Software Engineer Intern</option>
+                <option value="ai">AI Intern</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="remote">Remote option</label>
+              <input type="text" id="remote" name="remote" value="Not offered" disabled>
+            </div>
+            <div class="actions">
+              <button class="btn" type="submit">Submit</button>
+              <button class="btn btn-quiet" type="reset">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel" id="guidelines">
+          <h2>Application guidelines</h2>
+          <div class="columns">
+            <h3 class="columns-title">Before you apply</h3>
+            <p>Read the job description carefully and match your resume to the skills it asks for. Keep your portfolio link short and make sure every project opens without a login.</p>
+            <p class="tip">Tip: send applications early in the week. Recruiters usually review new applications on Monday and Tuesday.</p>
+            <p>Prepare two or three examples of work you are proud of. Explain what the problem was, what you built, and what you learned from it.</p>
+            <p>After you apply, check your email and the alerts above every day. Reply to interview invitations within one working day.</p>
+            <p class="tip">Tip: practise answering questions out loud before the interview.</p>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="dashboard-side">
+        <section class="panel" id="steps">
+          <h2>Application steps</h2>
+          <ol class="steps">
+            <li>Create your profile</li>
+            <li>Upload your resume</li>
+            <li>Choose a program</li>
+            <li>Book an interview slot</li>
+            <li>Accept your offer</li>
+          </ol>
+        </section>
+      </aside>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Bloomrix. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
